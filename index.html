@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css">
+  <title>Olivia Reichley - Music Artist</title>
+
+</head>
+<body>
+ <div class="container">
+    <div class="row">
+        <div class="sm-12 md-12 lg-5 col photo candid_photo">
+          <figure>
+            <img class="liv_photo" src="liv.jpg" alt="liv's photo">
+          </figure>
+          <figcaption class="candid_text" style="text-align: center;">
+            *Me in a totally candid pose
+          </figcaption>
+        </div>
+        <div class="sm-12 md-12 lg-7 col text">
+            <article class="article">
+                <h1 class="article-title">Hi, I'm Olivia Reichley</h1>
+                <p class="text-lead"> I absolutely love all things music, lifestyle, and fitness! Im a 21 year old college student and have a lot of fun making music and editing! I hope you enjoy my videos, don't forget to subscribe:) </p>
+                <p>Business email: <a href="mailto:livreichley@gmail.com"> livreichley@gmail.com </a> </p>
+                <div class="row">
+                  <figure class="col sm-12 md-3 m_logo" data-portal="spotify">
+                    <img src="logos/spotify.png" alt="Spotify logo">
+                    <figcaption style="text-align: center;">
+                      @Olivia Reichley
+                    </figcaption>
+                  </figure>
+
+                  <figure class="col sm-12 md-3 m_logo" data-portal="youtube">
+                      <img src="logos/youtube.png" alt="Youtube logo">
+                      <br>
+                      <figcaption style="text-align: center;">
+                        /oliviagrace5sing
+                      </figcaption>
+                    </figure>
+
+                    <figure class="col sm-12 md-3 m_logo" data-portal="twitter">
+                        <img src="logos/twitter.png" alt="Twitter logo">
+                        <figcaption style="text-align: center;">
+                          @OliviaReichley
+                        </figcaption>
+                      </figure>
+
+                      <figure class="col sm-12 md-3 m_logo apple" data-portal="apple">
+                          <img src="logos/apple.jpg" alt="Apple logo">
+                          <figcaption style="text-align: center;">
+                            /olivia-reichley
+                          </figcaption>
+                      </figure>
+                </div>
+              </article>
+        </div>
+    </div>
+
+ </div>
+
+  <style>
+
+  body {
+    background: linear-gradient(to top left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(./bg.jpg);
+    height: 100vh;
+  }
+
+  .container {
+    max-width: 1080px;
+    margin-top: 50px;
+  }
+
+  .liv_photo {
+    margin: 0 auto;
+    filter: grayscale(40%);
+    transition: all .3s ease-in;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
+
+  .liv_photo:hover {
+    filter: none;
+    transform: scale(1.1) rotate(3deg);
+  }
+
+  .m_logo > img {
+    filter: grayscale(90%);
+    border: none;
+    transition: all .1s ease-in;
+  }
+
+  .m_logo {
+    margin: 0;
+  }
+
+  .m_logo:hover > img {
+    filter: none;
+    transform: scale(1.1);
+  }
+
+  .m_logo:hover {
+    cursor: pointer;
+  }
+
+  @media (max-width: 400px) {
+
+    .liv_photo {
+      filter: grayscale(40%);
+      transform: scale(1.3);
+    }
+
+    .liv_photo:hover {
+      filter: none;
+      transform: scale(1.3);
+    }
+
+    .candid_photo {
+      position: relative;
+    }
+
+    .candid_text {
+      position: absolute;
+      bottom: -32px;
+    }
+
+  }
+
+  @media (max-width: 800px) {
+    .m_logo > img {
+      width: 100px;
+    }
+
+    .m_logo > figcaption {
+      display: inline-block;
+    }
+  }
+  </style>
+
+
+  <script>
+
+  const portals = {
+    spotify : "https://open.spotify.com/artist/3Zm9bQEGMsrL5ohORlM8ig",
+    apple : "https://music.apple.com/us/artist/olivia-reichley/671159907",
+    youtube : "https://www.youtube.com/channel/UC0cVI2nvCak-d2u-0SaeCjA",
+    twitter :  "https://twitter.com/oliviareichley"
+  }
+
+  const figures = document.querySelectorAll('.m_logo');
+  figures.forEach(figure => {
+    figure.addEventListener('click', function(){
+      const portal = figure.dataset.portal;
+      document.location = portals[portal];
+    });
+  });
+
+  </script>
+
+</body>
+</html>
+
+<!--
+
+  spotify https://open.spotify.com/artist/3Zm9bQEGMsrL5ohORlM8ig
+  apple https://music.apple.com/us/artist/olivia-reichley/671159907
+  youtube https://www.youtube.com/channel/UC0cVI2nvCak-d2u-0SaeCjA
+  twitter https://twitter.com/oliviareichley
+
+  oreic596@live.kutztown.edu
+  livreichley@gmail.com
+
+-->
